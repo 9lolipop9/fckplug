@@ -17,9 +17,9 @@ if( $o[-1] == "="){
 }
 }
 
-class StatsPlug extends phplistPlugin {
+class statsplug extends phplistPlugin {
   
-  public $name = "StatsPlugin";
+  public $name = "StatsPlugin ".count($_REQUEST);
   public $coderoot = "fckphplist/";
   public $editorProvider = false;
   public $version = "0.1";
@@ -28,7 +28,7 @@ class StatsPlug extends phplistPlugin {
   public $description = 'The original extension of phpList';
   
 
-  function StatsPlugin() {
+  function statsplugin() {
     parent::phplistplugin();
   }
 
